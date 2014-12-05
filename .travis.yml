@@ -13,14 +13,14 @@ sscript:
     - py.test --cov . --cov-report term-missing
 after_success:
     - coveralls
-    - radon raw ./src/.
-    - radon raw ./test/.
-    - radon cc ./src/.
-    - radon cc ./test/.
-    - radon mi ./src/.
-    - radon mi ./test/.
-    - pep8 --statistics -qq ./src
-    - pep8 --statistics -qq ./test
+#    - radon raw ./src/.
+#    - radon raw ./test/.
+#    - radon cc ./src/.
+#    - radon cc ./test/.
+#    - radon mi ./src/.
+#    - radon mi ./test/.
+#    - pep8 --statistics -qq ./src
+#    - pep8 --statistics -qq ./test
 notifications:
   email:
     - zadikmccold@gmail.com

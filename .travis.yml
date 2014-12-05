@@ -5,8 +5,22 @@ python:
 install:
     - pip install pytest pytest-cov
     - pip install coveralls
+    - pip install pep8
+    - pip install radon
+    - pip install mockito
 # command to run tests, e.g. python setup.py test
 sscript:
-- py.test --cov . --cov-report term-missing
+    - py.test --cov . --cov-report term-missing
 after_success:
-- coveralls
+    - coveralls
+    - radon raw ./src/.
+    - radon raw ./test/.
+    - radon cc ./src/.
+    - radon cc ./test/.
+    - radon mi ./src/.
+    - radon mi ./test/.
+    - pep8 --statistics -qq ./src
+    - pep8 --statistics -qq ./test
+notifications:
+  email:
+    - zadikmccold@gmail.com

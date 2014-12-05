@@ -11,7 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-
+   departamento
+   empleado
+   empresa
+   test_departamento
 
 Indices and tables
 ==================

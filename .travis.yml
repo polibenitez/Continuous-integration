@@ -12,7 +12,7 @@ install:
 sscript:
     - py.test --cov . --cov-report term-missing
 after_success:
-    - coveralls
+#    - coveralls
 #    - radon raw ./src/.
 #    - radon raw ./test/.
 #    - radon cc ./src/.

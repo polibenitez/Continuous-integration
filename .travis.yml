@@ -23,4 +23,7 @@ after_success:
     - pep8 --statistics -qq ./test
 notifications:
   email:
-    - mbenitezsan@gmail.com
+    recipients:
+        - mbenitezsan@gmail.com
+    on_failure: always
+    on_success: never
